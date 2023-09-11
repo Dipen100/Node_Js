@@ -1,0 +1,43 @@
+<div class="row" style="margin-top:10vh">
+  <div class="offset-4 col-md-4"
+    style="border:3px ridge lightgrey; padding: 20px; box-shadow: 3px 3px 3px 3px lightgrey">
+    {{#if error_message}}
+    <div class="alert alert-success-dismissible fade show" role="alert">
+      <strong>{{error_message}}</strong>
+      <button type="button" class="button-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/if}}
+    <h2 style="margin-left: 9rem; font-weight: bold">REGISTER</h2>
+    <form action="/register" method="post" class="row g-3">
+      <div class="col-md-12">
+        <label for="inputEmail4" class="form-label">Name</label>
+        <input type="text" class="form-control" placeholder="eg:- Dipendra" name="name" />
+      </div>
+      {{!-- <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="text" placeholder="eg:- Thapa" />
+      </div> --}}
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" placeholder="eg:- Tilottama-11" name="address" />
+      </div>
+      <div class="col-12">
+        <label for="inputPassword" class="form-label">Email</label>
+        <input type="" class="form-control" id="inputPassword" placeholder="eg:- chhetridipen10@gmail.com"
+          name="email" />
+      </div>
+      <div class="col-12">
+        <label for="inputPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="eg:- 1234" name="password" />
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-success"><a href="/login" , style="color: white;">Go Back</a>
+        </button>
+        {{! <button type="submit" class="btn btn-success">Go Back</button> }}
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+    </form>
+
+  </div>
+</div>

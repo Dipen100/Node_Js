@@ -1,0 +1,47 @@
+<div class="row" style="margin-top:20vh">
+  <div
+    class="offset-4 col-md-4"
+    style="border:3px ridge lightgrey; padding: 20px; box-shadow: 3px 3px 3px 3px lightgrey"
+  >
+  {{#if error_message}}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>{{error_message}}</strong>
+      <button type="button" class="button-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/if}}
+        {{#if success_message}}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>{{success_message}}</strong>
+      <button type="button" class="button-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/if}}
+    <h2 style="margin-left: 9rem; font-weight: bold">LOGIN</h2>
+    <form action="/login" method="post">
+      <div class="form-group mt-3">
+        <label for="">Email:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="eg:- chhetridipen10@gmail.com"
+          name="email"
+        />
+      </div>
+      <div class="form-group mt-3">
+        <label for="">Password:</label>
+        <input
+          type="password"
+          class="form-control"
+          placeholder="eg:- 1234"
+          name="password"
+        />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary mt-3">Login</button>
+      </div>
+      <div class="mt-2">
+        <span>Not a user yet ???
+          <a href="/register" style="text-decoration: none;">Register</a></span>
+      </div>
+    </form>
+  </div>
+</div>

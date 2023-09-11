@@ -1,0 +1,34 @@
+<div class="container mt-5 p-5" style="border:6px ridge lightblue">
+    <center>
+        <h2>Edit Post</h2>
+    </center>
+     <form action="/edit/{{post.id}}" method="POST" enctype="multipart/form-data">
+        {{!-- Email --}}
+            <div class="form-group p-2">
+                <label><b>Title</b></label>
+                <input type="text" class="form-control myinput" name="title" value="{{post.title}}" >
+            </div>
+
+            <div class="form-group p-2">
+                <label><b>Description:</b></label>
+                <textarea name="description" type="text"  class="form-control"style="height:200px;">{{post.description}}</textarea>
+            </div>
+
+            <div class="form-group p-2">
+                <label><b>Image:</b></label>
+                <input type="file" class="form-control myinput" name="image"  >
+            </div>
+        
+            <div class="form-group p-2">
+                <label><b>Aurthor:</b></label>
+                <input type="text" class="form-control myinput" name="author" value="{{post.author}}">
+            </div>
+            <br>
+            <center>
+                <button class="btn btn-primary" type="submit">Update</button>
+                
+                <a type="reset" class="btn btn-success" href="/postDetail/{{post.id}}">Cancel</a>
+            </center>
+
+        </form>
+</div>

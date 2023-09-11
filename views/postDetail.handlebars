@@ -1,0 +1,18 @@
+<div class="container mt-4">
+    <div style="border:2px ridge lightgreen;" class="py-3 mb-3 px-3">
+        <center>
+            <h3><b>{{post.title}}</b></h3>
+        </center>
+        <div class="offset-5">
+            <img src="/uploads/{{post.image}}" height="250" width="300" class="ml-5">
+        </div>
+        <br><br>
+        <small class="text-muted">{{post.created_at}},{{post.author}}</small>
+        <p>{{post.description}}</p>
+        <center>
+            <a type="reset" class="btn btn-success" href="/blog">Back</a>
+            <a type="reset" class="btn btn-primary" href="/edit/{{post.id}}">Edit</a>
+            <a type="reset" class="btn btn-danger" href="/delete/{{post.id}}">Delete</a>
+        </center>
+    </div>
+</div>

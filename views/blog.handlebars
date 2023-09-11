@@ -1,0 +1,35 @@
+<div class="container mt-3">
+    {{#if success_message}}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{success_message}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/if}}
+    <div class="d-flex justify-content-between">
+        <div>
+            <a href="/createPost"><button class="btn btn-warning mb-3">Create Post</button></a>
+        </div>
+        {{#if userId}}
+            <p><b> Welcome! {{name}}</b></p>
+        {{/if}}
+    </div>
+    {{#each results}}
+    <div style="border: 1px ridge rgb(238, 230, 230); background-color: white;" class="py-3 mb-4 pl-3 shadow">
+        <div class="media" style="display: flex;">
+            <div>
+                <img src="/uploads/{{image}}" width="180" height="150" class="m-3" alt="....">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-2">{{title}}</h5>
+                <small class="text-muted"> {{created_at}}, {{author}}</small>
+                <p>
+                    {{description}}
+                </p>
+                <button class="btn btn-primary">
+                    <a href="/postDetail/{{id}}" style="text-decoration: none; color:white">Read More</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
